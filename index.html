@@ -8,49 +8,55 @@
         <div class="calculator">
             <input placeholder="0" id="inputBox" readonly>
             <div>
-                <button onclick="">Rad/Deg</button>
+                <button onclick="toggleHistory()" id="history-btn">History</button>
+                <button onclick="" id="rad-deg-btn">Rad/Deg</button>
+                <button onclick="" id="rad-deg">Rad | Deg</button>
                 <button onclick="factorial()">x!</button>
                 <button onclick="Display('(')">(</button>
                 <button onclick="Display(')')">)</button>
                 <button onclick="Display('%')">%</button>
-                <button onclick="ClearDisplay()">AC</button>
+                <button onclick="Remove()">CE</button>
             </div>
             <div>
-                <button onclick="">Inv</button>
+                <button onclick="InvFunction()">Inv</button>
                 <button onclick="SinFunction()">sin</button>
                 <button onclick="LnFunction()">ln</button>
-                <button onclick="Display('7')">7</button>
-                <button onclick="Display('8')">8</button>
-                <button onclick="Display('9')">9</button>
-                <button onclick="Display('/')">/</button>
+                <button onclick="Display('7')" id="btn">7</button>
+                <button onclick="Display('8')" id="btn">8</button>
+                <button onclick="Display('9')" id="btn">9</button>
+                <button onclick="Display('/')">&divide;</button>
             </div>
             <div>
-                <button onclick="">pi</button>
+                <button onclick="PiFunction()">&pi;</button>
                 <button onclick="CosFunction()">cos</button>
                 <button onclick="LogFunction()">log</button>
-                <button onclick="Display('4')">4</button>
-                <button onclick="Display('5')">5</button>
-                <button onclick="Display('6')">6</button>
-                <button onclick="Display('*')">*</button>
+                <button onclick="Display('4')" id="btn">4</button>
+                <button onclick="Display('5')" id="btn">5</button>
+                <button onclick="Display('6')" id="btn">6</button>
+                <button onclick="Display('')"></button>
             </div>
             <div>
-                <button onclick="">e</button>
+                <button onclick="EFunction()">e</button>
                 <button onclick="TanFunction()">tan</button>
-                <button onclick="">Root</button>
-                <button onclick="Display('1')">1</button>
-                <button onclick="Display('2')">2</button>
-                <button onclick="Display('3')">3</button>
+                <button onclick="SqrtFunction()">&radic;</button>
+                <button onclick="Display('1')" id="btn">1</button>
+                <button onclick="Display('2')" id="btn">2</button>
+                <button onclick="Display('3')" id="btn">3</button>
                 <button onclick="Display('-')">-</button>
             </div>
             <div>
-                <button onclick="Calculate()">Ans</button>
+                <button onclick="ClearDisplay()">AC</button>
                 <button onclick="Exponential()">EXP</button>
                 <button onclick="">x<sup>y</sup></button>
-                <button onclick="Display('0')">0</button>
-                <button onclick="Display('.')">.</button>
-                <button onclick="Calculate()">=</button>
+                <button onclick="Display('0')" id="btn">0</button>
+                <button onclick="Display('.')" id="btn">.</button>
+                <button onclick="Calculate()" id="equal">=</button>
                 <button onclick="Display('+')">+</button>
             </div>
+        </div>
+        <div id="history" style="display:none;">
+            <h2>History</h2>
+            <ul id="historyList"></ul>
         </div>
         <script src="script.js"></script>
     </body>
